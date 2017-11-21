@@ -1,4 +1,5 @@
 # coding=utf8
+import bottle
 from bottle import route, run, response
 from urlparse import urlparse
 import json
@@ -156,5 +157,5 @@ def index(path):
     response.content_type = content_type
     return processor.gen()
 
-run(host='127.0.0.1', port=8080)
+app = bottle.default_app()
 
