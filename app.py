@@ -82,8 +82,8 @@ class html_processor(object):
 
 
     def gen(self):
-        self.css_links()
-        self.script_links()
+        #self.css_links()
+        #self.script_links()
         self.image_links()
         self.a_href_links()
         return self.html
