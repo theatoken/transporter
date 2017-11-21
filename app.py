@@ -10,7 +10,7 @@ import re
 
 def gen_uri(url, content_type):
     param = base64.urlsafe_b64encode(json.dumps([url, content_type]))
-    return "http://127.0.0.1:8080/delegate/%s" % param
+    return "http://13.114.161.7:9090/delegate/%s" % param
 
 def go_up_url(domain, base_path, url):
     ct = url.count('../')
