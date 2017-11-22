@@ -14,7 +14,7 @@ def index(path):
 
     #parsed_uri = urlparse(uri)
     #domain = '{uri.scheme}://{uri.netloc}'.format(uri=parsed_uri)
-    logging.error('get url:%s  content-type:', uri, content_type)
+    logging.error('get url:%s  content-type:%s', uri, content_type)
     r = requests.get(uri) if request.method.lower() == 'get' else requests.post(uri, data=request.body)
     r.raise_for_status()
 
