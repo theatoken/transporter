@@ -19,7 +19,8 @@ def index(path):
     r.raise_for_status()
 
     response.content_type = content_type
-    return r.raw
+    logging.error(r.content)
+    return r.content
 
 app = bottle.default_app()
 
