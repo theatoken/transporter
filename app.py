@@ -15,7 +15,8 @@ def index(path):
     #parsed_uri = urlparse(uri)
     #domain = '{uri.scheme}://{uri.netloc}'.format(uri=parsed_uri)
 
-    r = requests.get(uri, headers=request.headers)
+
+    r = requests.get(uri, headers=request.headers) if request.method.lower() == 'get' else requests.post(uri, data=request.body)
     r.raise_for_status()
 
     response.content_type = content_type
